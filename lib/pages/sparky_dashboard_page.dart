@@ -6,7 +6,6 @@ import 'package:the_gas_man_app/pages/market_place/market_place_home_page.dart';
 import 'package:the_gas_man_app/pages/new_calender/role_permissions.dart';
 import 'package:the_gas_man_app/pages/new_tax_and_invoice/pages/auth/invoice_login_screen.dart';
 import 'package:the_gas_man_app/pages/settings/engineer_settings_page.dart';
-import 'package:the_gas_man_app/pages/tools/gas_rate_page.dart';
 import 'package:the_gas_man_app/utils_class/utils.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../app/app_model.dart';
@@ -20,10 +19,7 @@ import 'new_certificate/certificate_home_page.dart';
 import 'new_invoice_page/pages/account_home_page.dart';
 import 'new_tax_and_invoice/api_service/auth_token_store.dart';
 import 'new_tax_and_invoice/invoice_and_tax_main_screen.dart';
-import 'radiator/radiator_calculator_page.dart';
 import 'termsandcondition/terms_and_condition_page.dart';
-import 'tools/latest_pipe_sizing_code.dart';
-import 'tools/ventilation_page_new.dart';
 
 class SparkyDashboardPage extends StatefulWidget {
   const SparkyDashboardPage({super.key});
@@ -447,42 +443,6 @@ class _SparkyDashboardPageState extends State<SparkyDashboardPage> {
             const SnackBar(content: Text("Jobs Corner - Coming soon!")),
           );
         },
-      ),
-      _QuickItem(
-        title: 'Gas Rate\nCalculator',
-        subtitle: 'Gas rate\ncalculator',
-        icon: Icons.speed_outlined,
-        iconColor: const Color(0xff00c5c9),
-        bgColor: const Color(0xffe8ffff),
-        buttonColor: const Color(0xff00bfc2),
-        onTap: () => _go(const GasRatePage()),
-      ),
-      _QuickItem(
-        title: 'Pipe Sizing',
-        subtitle: 'Pipe sizing\ncalculator',
-        icon: Icons.architecture_outlined,
-        iconColor: const Color(0xff16a8f7),
-        bgColor: const Color(0xffeefaff),
-        buttonColor: const Color(0xff1d9bf0),
-        onTap: () => _go(const LatestGasPipeSizingPage()),
-      ),
-      _QuickItem(
-        title: 'Ventilation',
-        subtitle: 'Ventilation\ncalculator',
-        icon: Icons.air_outlined,
-        iconColor: const Color(0xff10bd72),
-        bgColor: const Color(0xffedfff3),
-        buttonColor: const Color(0xff10bd4f),
-        onTap: () => _go(const VentilationCalculatorPage()),
-      ),
-      _QuickItem(
-        title: 'Radiator\nCalculator',
-        subtitle: 'Heat output\ncalculator',
-        icon: Icons.calculate_outlined,
-        iconColor: const Color(0xffff3d6e),
-        bgColor: const Color(0xffffeef2),
-        buttonColor: const Color(0xffff3d6e),
-        onTap: () => _go(const RadiatorCalculatorPage()),
       ),
       _QuickItem(
         title: 'Find\nMerchants',
